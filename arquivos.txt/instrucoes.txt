@@ -1,0 +1,22 @@
+# 1 - Abra o seu terminal e navegue até o diretório do seu projeto.
+
+# Para criar e ativar o ambiente virtual:
+# Para Windows:
+python -m venv venv
+venv\Scripts\activate
+
+# Para sistemas Unix/Mac:
+python3 -m venv venv
+source venv/bin/activate
+
+# 2 - Instalar Flask:
+pip install flask
+
+# 3 - Executar o Script do Banco de Dados para 'mercado.db':
+python init_db_mercado.py
+
+# 4 - Executar o Script do Banco de Dados para 'estoque.db':
+python init_db_estoque.py
+
+# 5 - Executar a Aplicação:
+python app.py

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades Cadastradas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/unidades_cadastradas.css') }}">
+</head>
+<body>
+    <header>
+        <a href="{{ url_for('index') }}">Mercado</a>
+    </header>
+    <div class="container">
+        <h1>Unidades Cadastradas</h1>
+        <ul>
+            {% for unidade in unidades %}
+            <li>
+                <h2>{{ unidade.nome }}</h2>
+                <p><strong>Endereço:</strong> {{ unidade.endereco }}</p>
+                <p><strong>Telefone:</strong> {{ unidade.telefone }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <footer>
+        <p>&copy; 2023 Mercado</p>
+    </footer>
+</body>
+</html>

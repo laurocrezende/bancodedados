@@ -1,0 +1,89 @@
+/* comprar.css */
+
+body {
+    background-color: #0c0e11;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+header {
+    background: #141a20;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header a {
+    color: #00aaff;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+nav {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+nav a {
+    color: #00aaff;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+form {
+    background: #1c1e22;
+    padding: 2rem;
+    border-radius: 5px;
+    max-width: 500px;
+    margin: 2rem auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+form input[type="text"],
+form input[type="number"],
+form select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    background: #00aaff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background: #008fcc;
+}
+
+footer {
+    background: #141a20;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    color: #ccc;
+}

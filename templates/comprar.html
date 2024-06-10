@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprar Produto</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/comprar.css') }}">
+</head>
+<body>
+    <header>
+        <a href="{{ url_for('index') }}">Mercado</a>
+    </header>
+    <div class="container">
+        <h1>Comprar Produto</h1>
+        <form method="post">
+            <label for="quantidade">Quantidade:</label>
+            <input type="text" id="quantidade" name="quantidade">
+            <label for="idMercado">Unidade Mercado:</label>
+            <select id="idMercado" name="idMercado">
+                {% for mercado in mercados %}
+                <option value="{{ mercado.idMercado }}">{{ mercado.nome }} - {{ mercado.endereco }}</option>
+                {% endfor %}
+            </select>
+            <input type="submit" value="Comprar">
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2023 Mercado</p>
+    </footer>
+</body>
+</html>

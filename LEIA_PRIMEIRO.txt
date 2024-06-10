@@ -1,0 +1,1 @@
+Para rodar o codigo, abra a pasta 'arquivos.txt' e vá ao arquivo 'instrucoes.txt' que você será orientado sobre como se deve utilizar a aplicação.

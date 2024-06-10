@@ -1,0 +1,56 @@
+--------------------------------------------
+Resumo: Configuração de Aplicação Flask
+--------------------------------------------
+
+1. Banco de Dados SQLite:
+   - Tabela "Produto":
+     - idProduto (INTEGER, PRIMARY KEY)
+     - nome (TEXT)
+     - preço (REAL)
+   - Tabela "Estoque":
+     - idProduto (INTEGER, FOREIGN KEY)
+     - quantidade (INTEGER)
+   - Tabela "Unidade Mercado":
+     - idMercado (INTEGER, PRIMARY KEY)
+     - endereço (TEXT)
+     - telefone (TEXT)
+     - nome (TEXT)
+
+2. Implementação em Flask:
+   - Arquivos necessários: app.py, templates/, static/
+   - Dependências: Flask, sqlite3
+   - Rotas:
+     - /: Página inicial com lista de produtos
+     - /produtos_em_estoque: Página com produtos em estoque
+     - /unidades_cadastradas: Página com unidades cadastradas
+     - /add_produto: Rota para adicionar produto
+     - /comprar/<idProduto>: Rota para comprar produto
+     - /add_mercado: Rota para adicionar unidade de mercado
+     - /excluir_produto/<idProduto>: Rota para excluir produto
+
+3. Operações:
+   - Adicionar Produto:
+     - Atualizar o formulário em add_produto.html
+   - Comprar Produto:
+     - Atualizar a função comprar em app.py
+   - Excluir Produto:
+     - Implementar função excluir_produto em app.py
+   - Adicionar Unidade Mercado:
+     - Atualizar o formulário em add_mercado.html
+
+4. Arquivos Estáticos:
+   - CSS:
+     - Arquivos CSS em static/css/
+     - Estilo global em style.css
+     - Estilo específico para produtos em estoque em produtos_em_estoque.css
+
+5. Atualizações em Templates:
+   - Incluir links para CSS em templates
+   - Adicionar formulários e elementos HTML conforme necessário
+
+6. Configurações Iniciais:
+   - Configurar ambiente virtual
+   - Instalar Flask
+   - Executar script de inicialização do banco de dados
+   - Executar aplicação Flask
+

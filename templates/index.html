@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="{{ url_for('index') }}">Mercado</a>
+    </header>
+    <nav>
+        <a href="{{ url_for('produtos_em_estoque') }}">Estoque</a>
+        <a href="{{ url_for('unidades_cadastradas') }}">Mercado</a>
+        <a href="{{ url_for('add_produto') }}">Adicionar Produto</a>
+        <a href="{{ url_for('add_mercado') }}">Adicionar Unidade Mercado</a>
+    </nav>
+    <div class="container">
+        <h1>Produtos</h1>
+        <ul>
+            {% for produto in produtos %}
+            <li>{{ produto.nome }} - R$ {{ produto.preco }} 
+                <a href="{{ url_for('comprar', idProduto=produto.idProduto) }}">Comprar</a>
+                <a href="{{ url_for('excluir_produto', id_produto=produto.idProduto) }}" class="delete-icon">
+                    <i class="fas fa-trash-alt"></i>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <footer>
+        <p>&copy; 2023 Mercado</p>
+    </footer>
+</body>
+</html>
